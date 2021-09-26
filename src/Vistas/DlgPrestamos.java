@@ -75,6 +75,7 @@ public class DlgPrestamos extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         buttonGroup1.add(btnPrestamos);
+        btnPrestamos.setSelected(true);
         btnPrestamos.setText("Listado");
 
         buttonGroup1.add(btnAlumnos);
