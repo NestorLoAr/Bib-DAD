@@ -9,6 +9,7 @@ package Controlador;
 import Vistas.*;
 import javax.swing.*;
 import Controlador.Tabla.IniciarTabla;
+import org.jdatepicker.JDatePicker;
 
 
 /**
@@ -96,6 +97,10 @@ public class Controlador {
     public void IniciarDlgFormularioPrestamo() {
 
         DlgFormularioPrestamo dlgFoPre = new DlgFormularioPrestamo(MENU, true);
+        
+        JDatePicker btnFecha = dlgFoPre.getBtnFecha();
+        
+        btnFecha.getModel().setSelected(true);
 
         JTable TablaLibros = dlgFoPre.getTablaLibros();
         JTable TablaAlumnos = dlgFoPre.getTablaAlumnos();
@@ -117,10 +122,16 @@ public class Controlador {
     public void IniciarDlgFormularioDevolucion() {
 
         DlgFormularioDevolucion dlgFoDe = new DlgFormularioDevolucion(MENU, true);
+        
+        JDatePicker btnFecha = dlgFoDe.getBtnFecha();
+        
+        btnFecha.getModel().setSelected(true);
 
         JTable tabla = dlgFoDe.getTablaPrestamosActuales();
         
         IniciarTabla.IniciaTabla(tabla, "prestamos", "devolucion");
+        
+        
 
         dlgFoDe.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
