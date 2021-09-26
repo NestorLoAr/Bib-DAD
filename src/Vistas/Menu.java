@@ -33,7 +33,6 @@ public class Menu extends javax.swing.JFrame {
         btnLibros = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         btnPrestamos = new javax.swing.JButton();
-        btnDlgAlumno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
@@ -49,8 +48,6 @@ public class Menu extends javax.swing.JFrame {
         btnPrestamos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prestamos.icon.png"))); // NOI18N
         btnPrestamos.setText("Préstamos");
 
-        btnDlgAlumno.setText("dlgalumno");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,17 +58,14 @@ public class Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAlumnos)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnLibros)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                                .addComponent(btnDlgAlumno))))
+                            .addComponent(btnLibros)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnPrestamos))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(btnSalir)))
-                .addGap(46, 46, 46))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAlumnos, btnLibros, btnPrestamos});
@@ -81,18 +75,13 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(btnAlumnos)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnLibros))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(btnDlgAlumno)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnLibros)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPrestamos)
                 .addGap(18, 18, 18)
                 .addComponent(btnSalir)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -114,16 +103,13 @@ public class Menu extends javax.swing.JFrame {
         return btnPrestamos;
     }
 
-    public JButton getBtnDlgAlumno() {
-        return btnDlgAlumno;
-    }
+    
     
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlumnos;
-    private javax.swing.JButton btnDlgAlumno;
     private javax.swing.JButton btnLibros;
     private javax.swing.JButton btnPrestamos;
     private javax.swing.JButton btnSalir;
