@@ -52,4 +52,20 @@ public class EventoBtnIniciarDlg {
             controlador.IniciarDlgFormularioDevolucion();
         });
     }
+    
+    public static void AniadirBotonDlgInformes(JButton btnInformes, Controlador controlador) {
+
+        btnInformes.addActionListener((ae) -> {
+
+            controlador.IniciarDlgInformes();
+        });
+    }
+    
+    public static void AniadirBotonDlgPresentacion(JButton btnPresentacion, Controlador controlador) {
+
+        btnPresentacion.addActionListener((ae) -> {
+
+            controlador.IniciarDlgPresentacion(ae);
+        });
+    }
 }

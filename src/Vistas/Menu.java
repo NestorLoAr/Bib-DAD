@@ -33,6 +33,7 @@ public class Menu extends javax.swing.JFrame {
         btnLibros = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         btnPrestamos = new javax.swing.JButton();
+        btnInformes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
@@ -48,24 +49,26 @@ public class Menu extends javax.swing.JFrame {
         btnPrestamos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prestamos.icon.png"))); // NOI18N
         btnPrestamos.setText("Préstamos");
 
+        btnInformes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/informes.icon.png"))); // NOI18N
+        btnInformes.setText("Informes");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnLibros)
+                    .addComponent(btnPrestamos)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAlumnos)
-                            .addComponent(btnLibros)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnPrestamos))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                        .addGap(14, 14, 14)
                         .addComponent(btnSalir)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnInformes)
+                    .addComponent(btnAlumnos))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAlumnos, btnLibros, btnPrestamos});
@@ -73,12 +76,14 @@ public class Menu extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(btnAlumnos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnLibros)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPrestamos)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLibros)
+                    .addComponent(btnAlumnos))
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPrestamos)
+                    .addComponent(btnInformes))
                 .addGap(18, 18, 18)
                 .addComponent(btnSalir)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -103,6 +108,10 @@ public class Menu extends javax.swing.JFrame {
         return btnPrestamos;
     }
 
+    public JButton getbtnInformes() {
+        return btnInformes;
+    }
+
     
     
     
@@ -110,6 +119,7 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlumnos;
+    private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnLibros;
     private javax.swing.JButton btnPrestamos;
     private javax.swing.JButton btnSalir;

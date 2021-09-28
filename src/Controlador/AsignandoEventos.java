@@ -37,12 +37,15 @@ public class AsignandoEventos {
         JButton btnAlumnos = menu.getBtnAlumnos();
         JButton btnLibro = menu.getBtnLibros();
         JButton btnPrestamos = menu.getBtnPrestamos();
+        JButton btnInformes = menu.getbtnInformes();
 
         EventoBtnSalir.AniadirBotonSalir(btnSalir);
 
         EventoBtnIniciarDlg.AniadirBotonDlgPrestamos(btnPrestamos, controlador);
         EventoBtnIniciarDlg.AniadirBotonDlgAlumnos(btnAlumnos, controlador);
         EventoBtnIniciarDlg.AniadirBotonDlgLibros(btnLibro, controlador);
+        EventoBtnIniciarDlg.AniadirBotonDlgInformes(btnInformes, controlador);
+        
 
     }
 
@@ -125,6 +128,17 @@ public class AsignandoEventos {
         EventoBtnSalir.AniadirBotonDispose(btnSalir, formulario);
 
         EventoMouseClick.AniadirEventoRaton(TablaPrestamosActuales, formulario);
+    }
+    
+    public static void AsignarEventos(DlgInformes informes, Controlador controlador) {
+
+        JButton btnAlumnos = informes.getBtnAlumnos();
+        JButton btnLibros = informes.getBtnLibros();
+        JButton btnSalir = informes.getBtnSalir();
+        
+        EventoBtnSalir.AniadirBotonDispose(btnSalir, informes);
+        EventoBtnIniciarDlg.AniadirBotonDlgPresentacion(btnAlumnos, controlador);
+        EventoBtnIniciarDlg.AniadirBotonDlgPresentacion(btnLibros, controlador);
     }
 
 }

@@ -9,6 +9,8 @@ package Controlador;
 import Vistas.*;
 import javax.swing.*;
 import Controlador.Tabla.IniciarTabla;
+import java.awt.event.ActionEvent;
+import net.sf.jasperreports.view.JasperViewer;
 import org.jdatepicker.JDatePicker;
 
 
@@ -142,6 +144,48 @@ public class Controlador {
         dlgFoDe.setVisible(true);
 
         
+    }
+    
+    public void IniciarDlgInformes(){
+        
+        DlgInformes dlgInformes = new DlgInformes(MENU, true);
+        
+        dlgInformes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        AsignandoEventos.AsignarEventos(dlgInformes, this);
+        dlgInformes.setVisible(true);
+        
+        
+    }
+    
+    public void IniciarDlgPresentacion(ActionEvent evt){
+        
+        String opcion = evt.getActionCommand();
+        
+        JasperViewer viewer;
+        
+        Informes informes = new Informes();
+        
+        if(opcion.contains("libros")){
+            
+            viewer = informes.getVista(1);
+            
+        }else{
+            
+            viewer = informes.getVista(2);
+            
+        }
+        
+        
+        
+        DlgPresentacionInformes presentacion = new DlgPresentacionInformes(MENU, true);
+        
+        System.err.println(evt.getActionCommand());
+        
+        presentacion.add(viewer.getContentPane());
+        
+        presentacion.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        presentacion.setVisible(true);
     }
 
 }
