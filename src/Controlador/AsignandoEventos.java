@@ -132,13 +132,22 @@ public class AsignandoEventos {
     
     public static void AsignarEventos(DlgInformes informes, Controlador controlador) {
 
-        JButton btnAlumnos = informes.getBtnAlumnos();
+        
         JButton btnLibros = informes.getBtnLibros();
         JButton btnSalir = informes.getBtnSalir();
+        JButton prueba = informes.getjButton1();
         
         EventoBtnSalir.AniadirBotonDispose(btnSalir, informes);
-        EventoBtnIniciarDlg.AniadirBotonDlgPresentacion(btnAlumnos, controlador);
+        
         EventoBtnIniciarDlg.AniadirBotonDlgPresentacion(btnLibros, controlador);
+        EventoBtnIniciarDlg.AniadirBotonDlgPresentacion(prueba, controlador);
+    }
+    
+    public static void AsignarEventos(DlgPresentacionInformes presentacion){
+        
+        JButton btnSalir = presentacion.getBtnSalir();
+        
+        EventoBtnSalir.AniadirBotonDispose(btnSalir, presentacion);
     }
 
 }
