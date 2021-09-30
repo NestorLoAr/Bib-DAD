@@ -30,7 +30,7 @@ public class Conexion {
         try {
 
             //Class.forName("com.mysql.jdbc.Driver"); esta es la otra opción para crear una conexión.
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
             String sUrl = "jdbc:mysql://localhost:3306/libros";
             conn = DriverManager.getConnection(sUrl, "root", "");
             JOptionPane.showMessageDialog(null, "Conectado!!!!");
@@ -45,7 +45,7 @@ public class Conexion {
         try {
 
             //Class.forName("com.mysql.jdbc.Driver"); esta es la otra opción para crear una conexión.
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
             String sUrl = "jdbc:mysql://localhost:3306/libros";
             conn = DriverManager.getConnection(sUrl, "root", "");
             return conn;
